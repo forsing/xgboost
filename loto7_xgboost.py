@@ -30,8 +30,15 @@ np.random.seed(SEED)
 random.seed(SEED)
 algorithm_globals.random_seed = SEED
 
+
+
+"""
+svih 4502 izvlacenja Loto 7/39 u Srbiji
+30.07.1985.- 28.10.2025.
+"""
+
 # 1. Učitaj loto podatke
-df = pd.read_csv("/Users/milan/Desktop/GHQ/data/loto7_4500_k84.csv", header=None)
+df = pd.read_csv("/data/loto7_4502_k85.csv", header=None)
 
 
 ###################################
@@ -62,11 +69,11 @@ print()
 Zadnjih 7 ucitanih kombinacija iz CSV fajla:
 
       0   1   2   3   4   5   6
-4491  3  10  11  23  27  29  36
-4492  9  12  29  32  34  35  36
-4493  3  15  21  25  28  29  34
-4494  4  15  16  20  33  38  39
-4495  7  11  16  18  29  31  36
+4497  4  13  14  19  27  35  37
+4498  1   7  13  18  25  30  34
+4499  1   5   6   7  11  24  37
+4500  2   4   6  11  21  33  35
+4501  1   3  11  12  19  35  38
 """
 
 
@@ -130,11 +137,11 @@ print()
 Zadnjih 5 mapiranih kombinacija:
 
       0   1   2   3   4   5   6
-4491  2   8   8  19  22  23  29
-4492  8  10  26  28  29  29  29
-4493  2  13  18  21  23  23  27
-4494  3  13  13  16  28  32  32
-4495  6   9  13  14  24  25  29
+4497  3  11  11  15  22  29  30
+4498  0   5  10  14  20  24  27
+4499  0   3   3   3   6  18  30
+4500  1   2   3   7  16  27  28
+4501  0   1   8   8  14  29  31
 """
 
 # Pretpostavljamo da prve 7 kolona sadrže brojeve lutrije
@@ -170,8 +177,12 @@ print()
 print("Predicted Next Lottery Numbers X y:", predicted_numbers)
 print()
 """
-Predicted Next Lottery Numbers X y: [[ 6  8 12 18 24 31 35]]
-Predicted Next Lottery Numbers X y: [[19 19 20 20 21 21 22]]
+XGBRFRegressor
+Predicted Next Lottery Numbers X y: [[ 5 10 15 20 25 30 35]]
+
+
+
+XGBRegressor
 
 """
 
@@ -198,8 +209,13 @@ print()
 print("Predicted Next Lottery Numbers X_x y_x:", predicted_numbers_x)
 print()
 """
-Predicted Next Lottery Numbers X_x y_x: [[ 4  6  9 14 19 25 28]]
-Predicted Next Lottery Numbers X_x y_x: [[15 15 16 16 17 17 17]]
+XGBRFRegressor
+Predicted Next Lottery Numbers X_x y_x: [[ 4  8 x x x 24 28]]
+
+
+
+XGBRegressor
+
 """
 
 
@@ -211,34 +227,17 @@ print()
 print(f"Učitano kombinacija: {df.shape[0]}, Broj pozicija: {df.shape[1]}")
 print()
 """
-Učitano kombinacija: 4496, Broj pozicija: 7
+Učitano kombinacija: 4502, Broj pozicija: 7
 """
 
 
 #######################################
 
 
-"""
-XGBRegressor
-
-Predicted Next Lottery Numbers X y: [[ 3  8 14 19 22 30 34]]
-
-Predicted Next Lottery Numbers X y: [[ 2 12 14 23 25 30 38]]
-Predicted Next Lottery Numbers X_x y_x: [[ 2  5 11 16 18 24 30]]
-
-
-
-
-XGBRFRegressor
-
-Predicted Next Lottery Numbers X y: [[ 5 10 15 20 25 30 35]]
-
-Predicted Next Lottery Numbers X y: [[ 5 10 15 20 25 30 35]]
-Predicted Next Lottery Numbers X_x y_x: [[ 4  8 12 16 20 24 28]]
-"""
-
 
 print()
 input("Press Enter to close the window ...")
 print()
+
+# Press Enter to close the window ...
 
