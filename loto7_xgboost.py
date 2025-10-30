@@ -45,12 +45,12 @@ df = pd.read_csv("/data/loto7_4502_k85.csv", header=None)
 
 
 print()
-print("Prvih 7 ucitanih kombinacija iz CSV fajla:")
+print("Prvih 5 ucitanih kombinacija iz CSV fajla:")
 print()
 print(df.head())
 print()
 """
-Prvih 7 ucitanih kombinacija iz CSV fajla:
+Prvih 5 ucitanih kombinacija iz CSV fajla:
 
     0   1   2   3   4   5   6
 0   5  14  15  17  28  30  34
@@ -61,12 +61,12 @@ Prvih 7 ucitanih kombinacija iz CSV fajla:
 """
 
 print()
-print("Zadnjih 7 ucitanih kombinacija iz CSV fajla:")
+print("Zadnjih 5 ucitanih kombinacija iz CSV fajla:")
 print()
 print(df.tail())
 print()
 """
-Zadnjih 7 ucitanih kombinacija iz CSV fajla:
+Zadnjih 5 ucitanih kombinacija iz CSV fajla:
 
       0   1   2   3   4   5   6
 4497  4  13  14  19  27  35  37
